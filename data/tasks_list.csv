@@ -1,0 +1,20 @@
+list_name,task_name,due_date,note,tags,completed
+work list,send report,20.12.2025,urgent,"email, work",FALSE
+home chores,clean kitchen,18.12.2025,use eco-friendly products,"home, cleaning",FALSE
+study plan,read chapter 5,17.12.2025,highlight key points,"study, reading",FALSE
+work list,team meeting,16.12.2025,prepare slides,"work, meeting",FALSE
+home chores,do laundry,19.12.2025,separate whites and colors,"home, cleaning",FALSE
+buy list,buy birthday gift,22.12.2025,for Sarah,"shopping, gift",FALSE
+personal,meditation,15.12.2025,20 minutes daily,"wellness, mental health",TRUE
+work list,client call,21.12.2025,confirm agenda,"work, call",FALSE
+study plan,practice exercises,20.12.2025,"chapter 4,5","study, practice",FALSE
+home chores,vacuum living room,18.12.2025,check under furniture,"home, cleaning",FALSE
+buy list,buy groceries,15.12.2025,fruits and vegetables,"shopping, food",TRUE
+personal,go for run,16.12.2025,5 km run,"wellness, sport",FALSE
+work list,prepare invoice,19.12.2025,verify amounts,"work, finance",FALSE
+study plan,write essay draft,22.12.2025,topic: environment,"study, writing",FALSE
+home chores,water plants,15.12.2025,front and back yard,"home, gardening",TRUE
+buy list,order laptop,23.12.2025,check discounts,"shopping, electronics",FALSE
+personal,call parents,16.12.2025,update on week,"family, call",FALSE
+work list,update website,21.12.2025,add new products,"work, web",FALSE
+study plan,revision session,20.12.2025,prepare for test,"study, revision",FALSE
