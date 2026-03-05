@@ -1,0 +1,5 @@
+funnel_url,expected_msg
+@$#$,(No URL given)
+1234,(available)
+funnel-00,(already taken)
+new url,(available)

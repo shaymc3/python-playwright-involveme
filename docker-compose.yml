@@ -1,0 +1,10 @@
+services:
+  tests:
+    build: .
+    volumes:
+      - ./allure-results:/app/allure-results
+    environment:
+      - BASE_URL=${BASE_URL:-https://app.involve.me}
+      - USER_EMAIL=${USER_EMAIL}
+      - USER_PASSWORD=${USER_PASSWORD}
+    command: pytest tests/ --alluredir=allure-results

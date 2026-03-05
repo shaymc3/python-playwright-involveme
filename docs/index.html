@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playwright Python Automation Framework — involve.me</title>
+    <meta name="description"
+        content="A professional Playwright + Python automation framework for involve.me, featuring Page Object Model, Allure reporting, Docker CI/CD, and comprehensive cross-browser testing." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎭</text></svg>" />
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <canvas id="particles-canvas"></canvas>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--teal"></div>
+    <div class="bg-glow bg-glow--purple"></div>
+
+    <!-- ════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════ -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                    <line x1="9" y1="9" x2="9.01" y2="9" />
+                    <line x1="15" y1="9" x2="15.01" y2="9" />
+                </svg>
+                Shayc.QA
+            </a>
+            <div class="nav-links">
+                <a href="#tech">Tech Stack</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#suites">Test Suites</a>
+                <a href="#code">Code</a>
+                <a href="#pipeline">CI/CD</a>
+                <a href="#reports">Reports</a>
+                <a href="#video">Demo</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════ -->
+    <header class="hero" id="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open-Source QA Automation
+            </div>
+
+            <h1>
+                <span class="gradient-text">Playwright + Python</span><br />
+                Automation Framework
+            </h1>
+
+            <p class="hero-subtitle">
+                A professional test automation suite for <strong>involve.me</strong>, powered by the Page Object Model
+                pattern,
+                Allure reporting, Docker CI/CD, and cross-browser support.
+            </p>
+
+            <div class="hero-cta">
+                <a href="https://github.com/shaymc3/python-playwright-involveme" target="_blank"
+                    class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                    View on GitHub
+                </a>
+                <a href="#suites" class="btn btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                    Explore Tests
+                </a>
+            </div>
+
+            <div class="hero-tech-badges">
+                <span class="tech-badge tech-badge--pytest">🧪 Pytest</span>
+                <span class="tech-badge tech-badge--playwright">🎭 Playwright</span>
+                <span class="tech-badge tech-badge--python">🐍 Python</span>
+                <span class="tech-badge tech-badge--allure">📊 Allure</span>
+                <span class="tech-badge tech-badge--docker">🐳 Docker</span>
+                <span class="tech-badge tech-badge--ghaction">⚡ GitHub Actions</span>
+            </div>
+
+            <!-- Floating terminal -->
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot terminal-dot--red"></span>
+                    <span class="terminal-dot terminal-dot--yellow"></span>
+                    <span class="terminal-dot terminal-dot--green"></span>
+                    <span class="terminal-title">pytest — involve.me automation</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="line"><span class="cmd">$</span> pytest <span class="flag">--headed</span> <span
+                            class="flag">-v</span></div>
+                    <div class="line">collecting... <span class="num">58 items</span></div>
+                    <div class="line"><span class="pass">PASSED</span> test_project_page.py::test_create_new_workspace
+                    </div>
+                    <div class="line"><span class="pass">PASSED</span> test_editor_page.py::test_drag_and_drop_element
+                    </div>
+                    <div class="line"><span class="pass">PASSED</span> test_e2e.py::test_create_ws_funnel_and_publish
+                    </div>
+                    <div class="line"><span class="pass">✓ 58 passed</span> in <span class="num">124.56s</span><span
+                            class="cursor"></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════
+       TECH STACK
+       ════════════════════════════════════════════ -->
+    <section id="tech">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Technology Stack</span>
+                <h2 class="section-title">Built with Modern Tools</h2>
+                <p class="section-subtitle">A carefully chosen set of technologies that delivers reliability, speed, and
+                    comprehensive reporting.</p>
+            </div>
+
+            <div class="tech-grid reveal-stagger">
+                <div class="tech-card">
+                    <div class="tech-card-icon" style="background: rgba(251,191,36,.1); color: var(--yellow);">🧪</div>
+                    <h3>Pytest</h3>
+                    <p>Powerful Python testing framework with fixtures, parametrize, hooks, and rich plugin ecosystem
+                        for scalable test organization.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon" style="background: rgba(52,211,153,.1); color: var(--green);">🎭</div>
+                    <h3>Playwright</h3>
+                    <p>Cross-browser automation by Microsoft with auto-waiting, reliable selectors, and support for
+                        Chromium, Firefox, and WebKit.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon" style="background: rgba(96,165,250,.1); color: var(--blue);">📐</div>
+                    <h3>Page Object Model</h3>
+                    <p>Clean architecture separating UI interactions from test logic — reusable page classes, component
+                        hierarchy, and type-safe elements.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon" style="background: rgba(251,146,60,.1); color: var(--orange);">📊</div>
+                    <h3>Allure Reporting</h3>
+                    <p>Rich HTML reports with test steps, screenshots on failure, epic/feature/story grouping, and trend
+                        charts across runs.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon" style="background: rgba(167,139,250,.1); color: var(--purple);">🐳</div>
+                    <h3>Docker</h3>
+                    <p>Containerized test execution with Docker Compose ensuring consistent environments from dev
+                        laptops to CI servers.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-card-icon" style="background: rgba(244,114,182,.1); color: var(--pink);">⚡</div>
+                    <h3>GitHub Actions</h3>
+                    <p>Automated CI pipeline: build, test, generate reports, and deploy results to GitHub Pages — all
+                        triggered on push.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       PROJECT ARCHITECTURE
+       ════════════════════════════════════════════ -->
+    <section id="architecture">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Project Architecture</span>
+                <h2 class="section-title">Clean, Modular Structure</h2>
+                <p class="section-subtitle">Following the Page Object Model pattern with clear separation of concerns
+                    across every layer.</p>
+            </div>
+
+            <div class="arch-card reveal">
+                <div class="arch-tree">
+                    <span class="folder">python-playwright-involveme/</span><br />
+                    ├── <span class="folder">.github/workflows/</span> <span class="desc">— CI/CD pipeline
+                        config</span><br />
+                    ├── <span class="folder">data/</span> <span class="desc">— CSV data files for parametrized
+                        tests</span><br />
+                    ├── <span class="folder">pages/</span> <span class="desc">— Page Object Model classes</span><br />
+                    │&nbsp;&nbsp; ├── <span class="folder">components/</span> <span class="desc">— Shared UI components
+                        (Header, etc.)</span><br />
+                    │&nbsp;&nbsp; ├── <span class="folder">editor_elements/</span> <span class="desc">— Element-specific
+                        classes (Slider, SingleChoice…)</span><br />
+                    │&nbsp;&nbsp; ├── <span class="folder">ui_types/</span> <span class="desc">— TypedDict definitions
+                        for UI types</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">base_page.py</span> <span class="desc">— Abstract base
+                        page</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">project_page.py</span> <span class="desc">— Dashboard
+                        interactions</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">editor_page.py</span> <span class="desc">— Funnel editor
+                        logic</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">preview_page.py</span> <span class="desc">— Published funnel
+                        preview</span><br />
+                    │&nbsp;&nbsp; └── <span class="file">configure_page.py</span> <span class="desc">— Settings
+                        page</span><br />
+                    ├── <span class="folder">tests/</span> <span class="desc">— Test suites organized by
+                        epic</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">test_project_page.py</span> <span class="desc">— 12 dashboard
+                        tests</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">test_editor_page.py</span> <span class="desc">— 14 editor
+                        tests</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">test_preview_page.py</span> <span class="desc">— 4 preview
+                        tests</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">test_configure_page.py</span> <span class="desc">— parametrized
+                        config tests</span><br />
+                    │&nbsp;&nbsp; ├── <span class="file">test_templates_page.py</span> <span class="desc">— template
+                        discovery tests</span><br />
+                    │&nbsp;&nbsp; └── <span class="file">test_e2e.py</span> <span class="desc">— end-to-end workflow
+                        tests</span><br />
+                    ├── <span class="folder">utils/</span> <span class="desc">— Data handlers &amp; visual
+                        effects</span><br />
+                    ├── <span class="file">conftest.py</span> <span class="desc">— Fixtures, hooks, auto-login,
+                        overlay</span><br />
+                    ├── <span class="file">config.py</span> <span class="desc">— Global constants</span><br />
+                    ├── <span class="file">Dockerfile</span> <span class="desc">— Container image</span><br />
+                    └── <span class="file">docker-compose.yml</span> <span class="desc">— Multi-service
+                        orchestration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       TEST SUITES
+       ════════════════════════════════════════════ -->
+    <section id="suites">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Test Coverage</span>
+                <h2 class="section-title">Comprehensive Test Suites</h2>
+                <p class="section-subtitle">Every critical workflow in involve.me is covered by automated tests,
+                    organized by Allure epics.</p>
+            </div>
+
+            <div class="suite-grid reveal-stagger">
+                <!-- Project Dashboard -->
+                <div class="suite-card">
+                    <div class="suite-card-header">
+                        <div class="suite-icon" style="background: rgba(96,165,250,.1); color: var(--blue);">📋</div>
+                        <h3>Project Dashboard</h3>
+                        <span class="test-count">12 tests</span>
+                    </div>
+                    <ul>
+                        <li>Create, rename &amp; delete workspaces</li>
+                        <li>Create funnels from scratch, AI, or templates</li>
+                        <li>Search, sort, duplicate &amp; move funnels</li>
+                        <li>Publish funnels &amp; verify status</li>
+                        <li>Delete all funnels in workspace</li>
+                    </ul>
+                </div>
+
+                <!-- Editor -->
+                <div class="suite-card">
+                    <div class="suite-card-header">
+                        <div class="suite-icon" style="background: rgba(167,139,250,.1); color: var(--purple);">✏️</div>
+                        <h3>Project Editor</h3>
+                        <span class="test-count">14 tests</span>
+                    </div>
+                    <ul>
+                        <li>Add, delete &amp; batch-manage elements</li>
+                        <li>Change question types &amp; layouts</li>
+                        <li>Edit question text, descriptions &amp; hints</li>
+                        <li>Drag and drop elements to canvas</li>
+                        <li>Add, delete &amp; rename funnel pages</li>
+                        <li>Slider range &amp; placeholder configuration</li>
+                    </ul>
+                </div>
+
+                <!-- Preview -->
+                <div class="suite-card">
+                    <div class="suite-card-header">
+                        <div class="suite-icon" style="background: rgba(52,211,153,.1); color: var(--green);">👁️</div>
+                        <h3>Preview</h3>
+                        <span class="test-count">4 tests</span>
+                    </div>
+                    <ul>
+                        <li>Slider &amp; Yes/No element interaction</li>
+                        <li>Dropdown &amp; Short Answer submission</li>
+                        <li>Multiple Image Choice &amp; Rating</li>
+                        <li>Page navigation &amp; Thank-You verification</li>
+                    </ul>
+                </div>
+
+                <!-- Configuration -->
+                <div class="suite-card">
+                    <div class="suite-card-header">
+                        <div class="suite-icon" style="background: rgba(251,146,60,.1); color: var(--orange);">⚙️</div>
+                        <h3>Configuration</h3>
+                        <span class="test-count">DDT</span>
+                    </div>
+                    <ul>
+                        <li>Change funnel name (data-driven)</li>
+                        <li>Change funnel URL with validation</li>
+                        <li>Switch funnel default language</li>
+                        <li>Powered by CSV data sets</li>
+                    </ul>
+                </div>
+
+                <!-- Templates -->
+                <div class="suite-card">
+                    <div class="suite-card-header">
+                        <div class="suite-icon" style="background: rgba(244,114,182,.1); color: var(--pink);">📄</div>
+                        <h3>Templates</h3>
+                        <span class="test-count">DDT</span>
+                    </div>
+                    <ul>
+                        <li>Search &amp; filter template library</li>
+                        <li>Category count vs. displayed items</li>
+                        <li>Template preview &amp; "Use Template" flow</li>
+                    </ul>
+                </div>
+
+                <!-- E2E -->
+                <div class="suite-card">
+                    <div class="suite-card-header">
+                        <div class="suite-icon" style="background: rgba(251,191,36,.1); color: var(--yellow);">🔗</div>
+                        <h3>End-to-End</h3>
+                        <span class="test-count">2 tests</span>
+                    </div>
+                    <ul>
+                        <li>Full workflow: create workspace → funnel → add elements → publish → verify</li>
+                        <li>Multi-page funnel: add pages, rename, navigate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       CODE SHOWCASE
+       ════════════════════════════════════════════ -->
+    <section id="code">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Code Showcase</span>
+                <h2 class="section-title">Clean, Readable Test Code</h2>
+                <p class="section-subtitle">Expressive Python tests with Allure decorators, Playwright assertions, and
+                    well-named fixtures.</p>
+            </div>
+
+            <div class="reveal">
+                <div class="code-tabs">
+                    <button class="code-tab active" data-target="code-e2e" data-file="test_e2e.py">E2E Workflow</button>
+                    <button class="code-tab" data-target="code-editor" data-file="test_editor_page.py">Editor: Drag
+                        &amp; Drop</button>
+                    <button class="code-tab" data-target="code-config" data-file="test_configure_page.py">Config:
+                        Parametrized</button>
+                    <button class="code-tab" data-target="code-conftest" data-file="conftest.py">conftest:
+                        Auto-Login</button>
+                </div>
+
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="terminal-dot terminal-dot--red"></span>
+                        <span class="terminal-dot terminal-dot--yellow"></span>
+                        <span class="terminal-dot terminal-dot--green"></span>
+                        <span class="code-panel-filename">test_e2e.py</span>
+                    </div>
+
+                    <!-- E2E -->
+                    <div class="code-block active" id="code-e2e">
+                        <pre><span class="dec">@allure.title</span>(<span class="str">"E2E Workflow: Create Workspace, Funnel, and Publish"</span>)
+<span class="dec">@allure.epic</span>(<span class="str">"End-to-End Tests"</span>)
+<span class="dec">@pytest.mark.e2e</span>
+<span class="kw">def</span> <span class="fn">test_create_ws_funnel_and_publish_workflow</span>(self, all_pages, project_page, editor_page):
+    ws_name = <span class="str">"test_workflow_1"</span>
+    ful_name = <span class="str">"My Funnel"</span>
+
+    project_page.<span class="method">create_new_workspace</span>(ws_name)
+    project_page.<span class="method">create_new_funnel_from_scratch</span>(ful_name, <span class="str">"Answer-based Outcomes"</span>)
+
+    <span class="fn">expect</span>(editor_page.FUNNEL_NAME_TITLE).<span class="method">to_have_text</span>(ful_name)
+    <span class="fn">expect</span>(editor_page.WORKSPACE_TITLE).<span class="method">to_have_text</span>(ws_name)
+
+    editor_page.<span class="method">add_element_and_close</span>(<span class="str">"Single Choice"</span>)
+    editor_page.<span class="method">add_element_and_close</span>(<span class="str">"Dropdown"</span>)
+    editor_page.<span class="method">add_element_and_close</span>(<span class="str">"Yes/No"</span>)
+
+    <span class="cmt"># After adding two elements, editor auto-adds "Next" button → count = 4</span>
+    <span class="fn">expect</span>(editor_page.ADDED_ELEMENTS_LIST).<span class="method">to_have_count</span>(<span class="num">4</span>)
+
+    editor_page.<span class="method">publish_funnel</span>()
+    project_page.<span class="method">goto_funnel_status</span>(<span class="str">"Published"</span>)
+    <span class="fn">expect</span>(project_page.FUNNEL_TITLES_LIST).<span class="method">to_have_count</span>(<span class="num">1</span>)</pre>
+                    </div>
+
+                    <!-- Editor DnD -->
+                    <div class="code-block" id="code-editor">
+                        <pre><span class="dec">@allure.title</span>(<span class="str">"Editor Page: Drag and Drop Element"</span>)
+<span class="dec">@allure.epic</span>(<span class="str">"Project Editor"</span>)
+<span class="dec">@allure.feature</span>(<span class="str">"Element Manipulation"</span>)
+<span class="dec">@allure.story</span>(<span class="str">"Add Element via Drag and Drop"</span>)
+<span class="dec">@pytest.mark.ui</span>
+<span class="kw">def</span> <span class="fn">test_drag_and_drop_element</span>(self, editor_page, create_new_funnel):
+    count_before = editor_page.<span class="method">get_all_added_elements_count</span>()
+    editor_page.<span class="method">drag_element_to</span>(<span class="str">"Slider"</span>, -<span class="num">1</span>)
+    <span class="fn">expect</span>(editor_page.ADDED_ELEMENTS_LIST).<span class="method">to_have_count</span>(count_before + <span class="num">2</span>)
+
+    <span class="kw">assert</span> editor_page.slider.<span class="method">get_element_title</span>(-<span class="num">1</span>) == \
+           editor_page.slider.DEFAULT_QUESTION_TEXT</pre>
+                    </div>
+
+                    <!-- Config parametrized -->
+                    <div class="code-block" id="code-config">
+                        <pre><span class="cls">class</span> <span class="fn">TestConfigure</span>:
+    url_data = <span class="cls">DataReader</span>(<span class="str">"configure_data/url_data"</span>).<span class="method">get_data</span>()
+    language_data = <span class="cls">DataReader</span>(<span class="str">"configure_data/language_data"</span>).<span class="method">get_data</span>()
+
+    <span class="dec">@allure.story</span>(<span class="str">"General Settings"</span>)
+    <span class="dec">@pytest.mark.parametrize</span>(<span class="str">"data"</span>, url_data)
+    <span class="kw">def</span> <span class="fn">test_change_url</span>(self, configure_page, data, create_new_funnel):
+        allure.dynamic.<span class="method">title</span>(<span class="str">f"Change funnel URL to '{data['funnel_url']}'"</span>)
+        new_url = data[<span class="str">"funnel_url"</span>]
+        configure_page.<span class="method">set_url</span>(new_url)
+        <span class="kw">assert</span> configure_page.<span class="method">get_url_availability</span>() <span class="kw">in</span> data[<span class="str">"expected_msg"</span>]</pre>
+                    </div>
+
+                    <!-- conftest -->
+                    <div class="code-block" id="code-conftest">
+                        <pre><span class="dec">@pytest.fixture</span>(autouse=<span class="kw">True</span>)
+<span class="kw">def</span> <span class="fn">setup</span>(page, playwright):
+    playwright.selectors.<span class="method">set_test_id_attribute</span>(<span class="str">"data-intercom-target"</span>)
+
+    page.<span class="method">add_locator_handler</span>(
+        page.<span class="method">locator</span>(<span class="str">".involveme_embed_popup-container"</span>).first,
+        <span class="kw">lambda</span>: page.<span class="method">locator</span>(<span class="str">"#embed-popup-close"</span>).<span class="method">click</span>()
+    )
+
+    page.<span class="method">goto</span>(config.BASE_URL)
+    <span class="kw">if</span> config.PROJECTS_URL <span class="kw">in</span> page.url:
+        <span class="kw">return</span>
+    <span class="kw">else</span>:
+        <span class="method">show_overlay</span>(page, <span class="str">"user is disconnected, starting login"</span>, <span class="str">"RUNNING"</span>)
+        login_page = <span class="cls">LoginPage</span>(page)
+        login_page.<span class="method">login</span>(config.USER_EMAIL, config.USER_PASSWORD)
+        login_page.page.context.<span class="method">storage_state</span>(path=AUTH_FILE)</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       CI/CD PIPELINE
+       ════════════════════════════════════════════ -->
+    <section id="pipeline">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>CI/CD Pipeline</span>
+                <h2 class="section-title">Automated from Push to Report</h2>
+                <p class="section-subtitle">Every push to main triggers the full pipeline — from code checkout to a
+                    deployed Allure report on GitHub Pages.</p>
+            </div>
+
+            <div class="pipeline reveal">
+                <div class="pipeline-step">
+                    <div class="step-number">1</div>
+                    <h4>Checkout</h4>
+                    <p>Pull latest code from the repository</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="step-number">2</div>
+                    <h4>Build Image</h4>
+                    <p>Build Docker image with Playwright &amp; deps</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="step-number">3</div>
+                    <h4>Run Tests</h4>
+                    <p>Execute full suite via Docker Compose</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="step-number">4</div>
+                    <h4>Generate Report</h4>
+                    <p>Produce Allure report with results</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <div class="step-number">5</div>
+                    <h4>Deploy</h4>
+                    <p>Publish report to GitHub Pages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       ALLURE REPORT GALLERY
+       ════════════════════════════════════════════ -->
+    <section id="reports">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Allure Reports</span>
+                <h2 class="section-title">Rich, Interactive Reports</h2>
+                <p class="section-subtitle">Every test run generates detailed Allure reports with dashboards, suite
+                    breakdowns, and step-level detail with failure screenshots.</p>
+            </div>
+
+            <div class="gallery-grid reveal-stagger">
+                <div class="gallery-item">
+                    <img src="images/allure_dashboard.png" alt="Allure Dashboard Overview" />
+                    <div class="gallery-caption">Dashboard Overview</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/allure_test_suites.png" alt="Test Suite Breakdown" />
+                    <div class="gallery-caption">Suite Breakdown</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/allure_test_detail.png" alt="Test Case Detail" />
+                    <div class="gallery-caption">Test Case Detail</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close">✕</button>
+        <img src="" alt="" />
+    </div>
+
+    <!-- ════════════════════════════════════════════
+       VIDEO DEMO
+       ════════════════════════════════════════════ -->
+    <section id="video">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Video Demo</span>
+                <h2 class="section-title">See It in Action</h2>
+                <p class="section-subtitle">Watch the framework running live — from login to test execution, element
+                    interaction, and Allure report generation.</p>
+            </div>
+
+            <div class="video-wrapper reveal">
+                <!-- Replace the video ID below with your actual YouTube video -->
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Framework Demo Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       QUICK START
+       ════════════════════════════════════════════ -->
+    <section id="quickstart">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Getting Started</span>
+                <h2 class="section-title">Up and Running in Minutes</h2>
+            </div>
+
+            <div class="quickstart-card reveal">
+                <div class="quickstart-steps">
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>Clone the repo</h4>
+                            <code>git clone https://github.com/shaymc3/python-playwright-involveme.git</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>Create virtual environment</h4>
+                            <code>python -m venv venv &amp;&amp; venv\Scripts\activate</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>Install dependencies</h4>
+                            <code>pip install -r requirements.txt</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>Install Playwright browsers</h4>
+                            <code>playwright install</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>Copy the example environment file and update it with your credentials</h4>
+                            <code>cp .env.example .env</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>Run tests</h4>
+                            <code>pytest --headed</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>To view Allure reports (the results are automatically generated as configured in
+                                `pytest.ini`):</h4>
+                            <code>allure serve allure-results</code>
+                        </div>
+                    </div>
+                    <div class="quickstart-step">
+                        <div>
+                            <h4>To run tests inside a Docker container using Docker Compose:</h4>
+                            <code>docker compose up --build</code>
+                            <h6>**It is recommended to first run `pytest --headed` outside of Docker until login is
+                                complete, because sometimes manual verification is required (e.g., CAPTCHA or email
+                                code).</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ════════════════════════════════════════════
+       CONTACT
+       ════════════════════════════════════════════ -->
+    <section id="contact">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label"><span class="dot"></span>Contact Me</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">QA Automation Engineer passionate about building robust testing frameworks.
+                    Feel free to reach out for collaboration, questions, or opportunities.</p>
+            </div>
+
+            <div class="contact-grid reveal-stagger">
+                <div class="contact-card">
+                    <div class="contact-icon" style="background: rgba(96,165,250,.1); color: var(--blue);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally</p>
+                    <a href="https://www.linkedin.com/in/shaycohen27/" target="_blank" class="contact-link">
+                        View Profile →
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon" style="background: rgba(255,255,255,.06); color: #fff;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Explore my projects &amp; contributions</p>
+                    <a href="https://github.com/shaymc3/" target="_blank" class="contact-link">
+                        View Profile →
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon" style="background: rgba(52,211,153,.1); color: var(--green);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Get in touch directly</p>
+                    <a href="mailto:shayc.qa@gmail.com" class="contact-link">
+                        shayc.qa@gmail.com →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/shaymc3/python-playwright-involveme" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/shaycohen27/" target="_blank">LinkedIn</a>
+                <a href="mailto:shayc.qa@gmail.com">Email</a>
+            </div>
+            <p>Built by Shay Cohen & Claude Code</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

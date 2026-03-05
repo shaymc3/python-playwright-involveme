@@ -1,9 +1,10 @@
-import pandas as pd
 import os
+
+import pandas as pd
 
 
 class DataReader:
-    def __init__(self, file):
+    def __init__(self, file: str):
         file_name = "data/" + file + ".csv"
         print(file_name)
         if not os.path.exists(file_name):

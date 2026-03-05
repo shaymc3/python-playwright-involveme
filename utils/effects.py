@@ -1,9 +1,10 @@
 #for video only
+from playwright.sync_api import Page
 
 video = True
 
 
-def show_overlay(page, test_name: str, status: str):
+def show_overlay(page: Page, test_name: str, status: str):
     if not video:
         return
     color_map = {
@@ -81,16 +82,17 @@ def show_overlay(page, test_name: str, status: str):
             }, 3000);
 
             // cleanup
-            setTimeout(() => wrapper.remove(), 3500);
+            setTimeout(() => wrapper.remove(), 2000);
         }
         """,
         {"testName": test_name, "status": status, "color": color}
     )
+    page.wait_for_timeout(2000)
 
 
-click_script = f"""
-            () => {{
-                document.addEventListener("mousedown", (e) => {{
+click_script = """
+            () => {
+                document.addEventListener("mousedown", (e) => {
                 const ripple = document.createElement("div");
                 ripple.style.position = "fixed";
                 ripple.style.left = e.clientX + "px";
@@ -104,26 +106,26 @@ click_script = f"""
                   ripple.style.opacity = "0.8";
                   ripple.style.transition = "transform 0.2s ease-out, opacity 0.3s ease-out";
                   document.body.appendChild(ripple);
-                  requestAnimationFrame(() => {{
+                  requestAnimationFrame(() => {
                     ripple.style.transform = "translate(-50%, -50%) scale(2.5)";
                     ripple.style.opacity = "0";
-                  }});
+                  });
                   setTimeout(() => ripple.remove(), 700);
-                }});
-            }}
+                });
+            }
         """ if video else ""
 
-fill_script = f"""
-               (el) => {{
+fill_script = """
+               (el) => {
                    const origShadow = el.style.boxShadow;
                    const origBackground = el.style.backgroundColor;
                    el.style.border = '3px solid red'; 
                    el.style.boxShadow = '0 0 10px 4px rgba(0, 150, 255, 0.7)';
                    el.style.backgroundColor = '#eeebd0';
 
-                   setTimeout(() => {{
+                   setTimeout(() => {
                        el.style.boxShadow = origShadow;
                        el.style.backgroundColor = origBackground;
-                   }}, 300);
-               }}
+                   }, 300);
+               }
            """ if video else ""

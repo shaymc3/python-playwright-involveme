@@ -75,7 +75,25 @@ TextChoiceOptions = Literal[
     "Answer is required",
     "Randomize answers",
     "Individual Score & Calculation",
+    "Always Hide for participants",
 ]
+
+TextAnswerOptions = Literal[
+    "Continue by pressing enter",
+    "Hide question text for participants",
+    "Use question as placeholder",
+    "Answer is required",
+    "Only accept numbers",
+    "Always Hide for participants"
+
+]
+
+SliderOptions = Literal[
+    "Min Value",
+    "Max Value",
+    "Start Value",
+]
+
 
 PageMenuOption = Literal[
     "Move right",
@@ -84,4 +102,24 @@ PageMenuOption = Literal[
     "Duplicate",
     "Disable",
     "Delete",
+]
+
+QuestionTypes = Literal[
+    "Text Choice",
+    "Image Choice",
+    "Dropdown"
+]
+
+ElementTextBox = Literal[
+    "Question Text",
+    "Description Text",
+    "Hint / Help Text",
+]
+
+EditorHeaderOpt = Literal[
+    "Edit",
+    "Connect",
+    "Settings",
+    "Share & Embed",
+    "Responses",
 ]

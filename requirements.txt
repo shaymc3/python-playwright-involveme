@@ -1,0 +1,6 @@
+pytest==9.0.2
+pytest-playwright==0.7.2
+allure-pytest==2.15.3
+pandas==3.0.0
+python-dotenv==1.2.1
+playwright==1.57.0
