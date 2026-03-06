@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"This test deletes all existing workspaces to ensure a clean test environment for subsequent runs.","0","Cleanup: Delete All Workspaces","tests","Fri Mar 06 08:16:31 UTC 2026","broken","Fri Mar 06 08:16:31 UTC 2026","","test_00_cleanup","",""
-"Verify that the user can successfully change the name of the funnel.","0","test_change_funnel_name[chromium-data0]","tests","Fri Mar 06 08:20:35 UTC 2026","broken","Fri Mar 06 08:20:35 UTC 2026","TestConfigure","test_configure_page","",""
