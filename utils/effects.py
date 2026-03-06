@@ -1,7 +1,7 @@
 #for video only
 from playwright.sync_api import Page
 
-video = True
+video = False
 
 
 def show_overlay(page: Page, test_name: str, status: str):
