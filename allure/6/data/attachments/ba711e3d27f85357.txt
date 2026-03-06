@@ -1,0 +1,3 @@
+[Console Error] Failed to load resource: the server responded with a status of 404 ()
+[Console Error] Access to script at 'https://connect.facebook.net/en_US/bundle/sdk.js/' from origin 'https://app.involve.me' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+[Console Error] Failed to load resource: net::ERR_FAILED
