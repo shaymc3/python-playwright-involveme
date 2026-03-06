@@ -96,18 +96,6 @@
                 </a>
             </div>
 
-            <div class="hero-tech-badges">
-                <span class="tech-badge tech-badge--pytest">🧪 Pytest</span>
-                <span class="tech-badge tech-badge--playwright">🎭 Playwright</span>
-                <span class="tech-badge tech-badge--python">🐍 Python</span>
-                <span class="tech-badge tech-badge--allure">📊 Allure</span>
-                <span class="tech-badge tech-badge--docker">🐳 Docker</span>
-                <span class="tech-badge tech-badge--ghaction">⚡ GitHub Actions</span>
-                <span class="tech-badge tech-badge--python">🐼 Pandas</span>
-                <span class="tech-badge tech-badge--pytest">🔄 pytest-rerunfailures</span>
-                <span class="tech-badge tech-badge--pytest">🔢 pytest-order</span>
-            </div>
-
             <!-- Floating terminal -->
             <div class="hero-terminal">
                 <div class="terminal-header">
@@ -130,6 +118,17 @@
                             class="cursor"></span></div>
                 </div>
             </div>
+
+            <div class="hero-tech-badges">
+                <span class="tech-badge tech-badge--pytest">🧪 Pytest</span>
+                <span class="tech-badge tech-badge--playwright">🎭 Playwright</span>
+                <span class="tech-badge tech-badge--python">🐍 Python</span>
+                <span class="tech-badge tech-badge--allure">📊 Allure</span>
+                <span class="tech-badge tech-badge--docker">🐳 Docker</span>
+                <span class="tech-badge tech-badge--ghaction">⚡ GitHub Actions</span>
+                <span class="tech-badge tech-badge--python">🐼 Pandas</span>
+            </div>
+
         </div>
     </header>
 
@@ -161,7 +160,7 @@
                 <div class="tech-card">
                     <div class="tech-card-icon" style="background: rgba(96,165,250,.1); color: var(--blue);">📐</div>
                     <h3>Page Object Model</h3>
-                    <p>Clean architecture separating UI interactions from test logic — reusable page classes, component
+                    <p>Clean architecture separating UI interactions from test logic - reusable page classes, component
                         hierarchy, and type-safe elements.</p>
                 </div>
                 <div class="tech-card">
@@ -179,7 +178,7 @@
                 <div class="tech-card">
                     <div class="tech-card-icon" style="background: rgba(244,114,182,.1); color: var(--pink);">⚡</div>
                     <h3>GitHub Actions</h3>
-                    <p>Automated CI pipeline: build, test, generate reports, and deploy results to GitHub Pages — all
+                    <p>Automated CI pipeline: build, test, generate reports, and deploy results to GitHub Pages - all
                         triggered on push.</p>
                 </div>
                 <div class="tech-card">
@@ -543,6 +542,15 @@
                 <h2 class="section-title">Rich, Interactive Reports</h2>
                 <p class="section-subtitle">Every test run generates detailed Allure reports with dashboards, suite
                     breakdowns, and step-level detail with failure screenshots.</p>
+                <div class="reports-auto-note reveal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Reports are <strong>automatically generated and deployed</strong> to GitHub Pages after every CI run
+                    via GitHub Actions — no manual steps required.
+                </div>
             </div>
 
             <div class="gallery-grid reveal-stagger">
@@ -558,6 +566,20 @@
                     <img src="images/allure_test_detail.png" alt="Test Case Detail" />
                     <div class="gallery-caption">Test Case Detail</div>
                 </div>
+            </div>
+
+            <div class="reports-cta reveal">
+                <a href="https://shaymc3.github.io/python-playwright-involveme/allure" target="_blank"
+                    class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6H6V7h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View Live Allure Report
+                </a>
+                <p class="reports-cta-sub">Auto-published after every GitHub Actions run</p>
             </div>
         </div>
     </section>
@@ -581,11 +603,13 @@
             </div>
 
             <div class="video-wrapper reveal">
-                <!-- Replace the video ID below with your actual YouTube video -->
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Framework Demo Video"
+                <iframe id="yt-player" src="https://www.youtube.com/embed/0750SpjMc6A?enablejsapi=1&rel=0"
+                    title="Framework Demo Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
+            <p class="video-speed-note reveal">▶ Playing at <strong>2× speed</strong> — change anytime via the YouTube
+                player settings</p>
         </div>
     </section>
 
@@ -732,6 +756,20 @@
         </div>
     </footer>
 
+    <!-- YouTube IFrame API for 2x playback speed -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var ytPlayer;
+        function onYouTubeIframeAPIReady() {
+            ytPlayer = new YT.Player('yt-player', {
+                events: {
+                    'onReady': function (e) {
+                        e.target.setPlaybackRate(2);
+                    }
+                }
+            });
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 
